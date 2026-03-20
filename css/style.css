@@ -71,69 +71,109 @@ button {
 }
 
 /* ============================================
-   HEADER STYLES
+   HEADER STYLES (jbMenu Structure)
    ============================================ */
-.site-header {
-    background: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
+.jb-menu {
     position: relative;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+.jb-menu.jb-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Utility Bar */
-.utility-bar {
+#header {
     background: #ffffff;
     border-bottom: 1px solid #e0e0e0;
 }
 
-.utility-inner {
-    max-width: 1200px;
+.head-inner {
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 12px 20px;
-}
-
-.utility-menu {
-    display: flex;
-    gap: 15px;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.utility-link {
-    font-size: 13px;
-    color: #ffffff;
-    font-weight: 500;
-    padding: 8px 16px;
-    background: #27ae60;
-    border-radius: 3px;
-    transition: all 0.25s ease;
-}
-
-.utility-link:hover {
-    background: #229954;
-    color: #ffffff;
+    padding: 20px 20px 15px;
+    position: relative;
 }
 
 /* Logo */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
 .logo img {
-    height: 60px;
+    height: 50px;
     width: auto;
+    display: block;
+}
+
+/* Top Menu (Utility Buttons) */
+.top-menu {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10;
+}
+
+.top-menu ul {
+    display: flex;
+    gap: 8px;
+}
+
+.top-btn {
+    font-size: 13px;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 10px 18px;
+    background: #27ae60;
+    border-radius: 3px;
+    transition: all 0.25s ease;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.top-btn:hover {
+    background: #229954;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Button variations */
+.top-btn.bg1 {
+    background: #27ae60;
+}
+
+.top-btn.bg2 {
+    background: #3498db;
+}
+
+.top-btn.bg3 {
+    background: #e74c3c;
+}
+
+.top-btn.bg1:hover {
+    background: #229954;
+}
+
+.top-btn.bg2:hover {
+    background: #2980b9;
+}
+
+.top-btn.bg3:hover {
+    background: #c0392b;
 }
 
 /* Main Navigation */
-.main-navigation {
-    flex: 1;
+#main-nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
 }
 
 .nav-menu {

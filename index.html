@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(주) 신덕팜 - SINDEOK PHARM</title>
-    <link rel="stylesheet" href="css/style.css?v=202603201626">
+    <link rel="stylesheet" href="css/style.css?v=202603201730">
     <!-- Google Fonts: Noto Sans KR + Nanum Gothic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,92 +19,85 @@
          HEADER - 로고 및 메인 네비게이션
          ======================================== -->
     
-    <!-- Utility Bar - Fixed on scroll (top) -->
-    <div class="utility-bar">
-        <div class="utility-inner">
-            <ul class="utility-menu">
-                <li><a href="#" class="utility-link">WEB 주문</a></li>
-                <li><a href="#" class="utility-link">제약사</a></li>
-                <li><a href="#" class="utility-link">오시는 길</a></li>
-                <li><a href="#" class="utility-link">원격지원</a></li>
-            </ul>
+    <!-- Header Container (jbMenu equivalent) -->
+    <div class="jb-menu">
+        <div id="header">
+            <div class="head-inner">
+                <!-- 로고 -->
+                <h1 class="logo">
+                    <a href="/">
+                        <img src="images/logo.png" alt="(주) 신덕팜 - SINDEOK PHARM 로고">
+                    </a>
+                </h1>
+
+                <!-- 메인 네비게이션 -->
+                <nav id="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item has-submenu">
+                            <a href="#" class="nav-link">회사소개</a>
+                            <ul class="submenu">
+                                <li><a href="#">신덕팜의 철학</a></li>
+                                <li><a href="#">신덕팜 소개</a></li>
+                                <li><a href="#">교육체계</a></li>
+                                <li><a href="#">문의하기</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a href="#" class="nav-link">정도경영</a>
+                            <ul class="submenu">
+                                <li><a href="#">윤리경영</a></li>
+                                <li><a href="#">부패방지경영</a></li>
+                                <li><a href="#">품질·환경경영</a></li>
+                                <li><a href="#">온라인 신문고</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a href="#" class="nav-link">사업소개</a>
+                            <ul class="submenu">
+                                <li><a href="#">의약품 유통</a></li>
+                                <li><a href="#">의약품 물류 수탁</a></li>
+                                <li><a href="#">영업 활동 지원</a></li>
+                                <li><a href="#">신규사업개발</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a href="#" class="nav-link">제품소개</a>
+                            <ul class="submenu">
+                                <li><a href="#">신덕팜 PB 상품</a></li>
+                                <li><a href="#">일반의약품</a></li>
+                                <li><a href="#">의료 소모품</a></li>
+                                <li><a href="#">의료기기</a></li>
+                                <li><a href="#">건강기능식품</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a href="#" class="nav-link">신덕소식</a>
+                            <ul class="submenu">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">신덕소식</a></li>
+                                <li><a href="#">제품정보</a></li>
+                                <li><a href="#">업계소식</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">채용정보</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Top Menu (Utility Buttons) -->
+                <div class="top-menu">
+                    <ul>
+                        <li><a href="#" class="top-btn bg1">WEB 주문</a></li>
+                        <li><a href="#" class="top-btn bg2">제약사</a></li>
+                        <li><a href="#" class="top-btn">오시는 길</a></li>
+                        <li><a href="#" class="top-btn bg3">원격지원</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    
-    <!-- Main Header - Scrolls with content -->
-    <header class="site-header">
-        <div class="header-inner">
-            <!-- 로고 -->
-            <div class="logo">
-                <a href="/">
-                    <img src="images/logo.png" alt="(주) 신덕팜 - SINDEOK PHARM 로고" width="200" height="60">
-                </a>
-            </div>
-
-            <!-- 메인 네비게이션 -->
-            <nav id="main-nav" class="main-navigation">
-                <ul class="nav-menu">
-                    <li class="nav-item has-submenu">
-                        <a href="#" class="nav-link">회사소개</a>
-                        <ul class="submenu">
-                            <li><a href="#">신덕팜의 철학</a></li>
-                            <li><a href="#">신덕팜 소개</a></li>
-                            <li><a href="#">교육체계</a></li>
-                            <li><a href="#">문의하기</a></li>
-                            <li><a href="#">오시는 길</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#" class="nav-link">정도경영</a>
-                        <ul class="submenu">
-                            <li><a href="#">윤리경영</a></li>
-                            <li><a href="#">부패방지경영</a></li>
-                            <li><a href="#">품질·환경경영</a></li>
-                            <li><a href="#">온라인 신문고</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#" class="nav-link">사업소개</a>
-                        <ul class="submenu">
-                            <li><a href="#">의약품 유통</a></li>
-                            <li><a href="#">의약품 물류 수탁</a></li>
-                            <li><a href="#">영업 활동 지원</a></li>
-                            <li><a href="#">신규사업개발</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#" class="nav-link">제품소개</a>
-                        <ul class="submenu">
-                            <li><a href="#">신덕팜 PB 상품</a></li>
-                            <li><a href="#">일반의약품</a></li>
-                            <li><a href="#">의료 소모품</a></li>
-                            <li><a href="#">의료기기</a></li>
-                            <li><a href="#">건강기능식품</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#" class="nav-link">신덕소식</a>
-                        <ul class="submenu">
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">신덕소식</a></li>
-                            <li><a href="#">제품정보</a></li>
-                            <li><a href="#">업계소식</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">채용정보</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- 모바일 메뉴 토글 버튼 -->
-            <button class="mobile-menu-toggle" aria-label="메뉴 열기">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-        </div>
-    </header>
 
     <!-- ========================================
          MAIN CONTENT
@@ -345,6 +338,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=202603201626"></script>
+    <script src="js/main.js?v=202603201730"></script>
 </body>
 </html>

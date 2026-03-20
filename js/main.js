@@ -13,39 +13,19 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // ========================================
-    // HEADER SCROLL BEHAVIOR
+    // HEADER SCROLL BEHAVIOR (jbMenu)
     // ========================================
-    const siteHeader = document.querySelector('.site-header');
-    let lastScrollY = window.scrollY;
+    const jbMenu = document.querySelector('.jb-menu');
     
-    function handleHeaderScroll() {
-        const currentScrollY = window.scrollY;
-        
-        // Utility bar 는 항상 고정 (sticky)
-        // Main header 는 스크롤 시 함께 내려감
-        if (currentScrollY > 100) {
-            siteHeader?.classList.add('scrolled');
-        } else {
-            siteHeader?.classList.remove('scrolled');
-        }
-        
-        lastScrollY = currentScrollY;
-    }
-    
-    // Throttled scroll listener
-    let ticking = false;
     window.addEventListener('scroll', function() {
-        if (!ticking) {
-            window.requestAnimationFrame(function() {
-                handleHeaderScroll();
-                ticking = false;
-            });
-            ticking = true;
+        const scrollY = window.scrollY;
+        
+        if (scrollY > 100) {
+            jbMenu?.classList.add('jb-fixed');
+        } else {
+            jbMenu?.classList.remove('jb-fixed');
         }
     });
-    
-    // Initial check
-    handleHeaderScroll();
     
     // ========================================
     // HERO SLIDER
