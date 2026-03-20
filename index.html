@@ -5,8 +5,345 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(주) 신덕팜 - SINDEOK PHARM</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts: Noto Sans KR + Nanum Gothic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Empty homepage - Ready for new design -->
+    <!-- Accessibility Skip Links -->
+    <a href="#main-nav" class="skip-link">메인메뉴 바로가기</a>
+    <a href="#main-content" class="skip-link">본문내용 바로가기</a>
+
+    <!-- ========================================
+         HEADER - 로고 및 메인 네비게이션
+         ======================================== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <!-- 로고 -->
+            <div class="logo">
+                <a href="/">
+                    <img src="images/logo.png" alt="(주) 신덕팜 - SINDEOK PHARM 로고">
+                </a>
+            </div>
+
+            <!-- 메인 네비게이션 -->
+            <nav id="main-nav" class="main-navigation">
+                <ul class="nav-menu">
+                    <li class="nav-item has-submenu">
+                        <a href="#" class="nav-link">회사소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">신덕팜의 철학</a></li>
+                            <li><a href="#">신덕팜 소개</a></li>
+                            <li><a href="#">교육체계</a></li>
+                            <li><a href="#">문의하기</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-submenu">
+                        <a href="#" class="nav-link">정도경영</a>
+                        <ul class="submenu">
+                            <li><a href="#">윤리경영</a></li>
+                            <li><a href="#">부패방지경영</a></li>
+                            <li><a href="#">품질·환경경영</a></li>
+                            <li><a href="#">온라인 신문고</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-submenu">
+                        <a href="#" class="nav-link">사업소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">의약품 유통</a></li>
+                            <li><a href="#">의약품 물류 수탁</a></li>
+                            <li><a href="#">영업 활동 지원</a></li>
+                            <li><a href="#">신규사업개발</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-submenu">
+                        <a href="#" class="nav-link">제품소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">신덕팜 PB 상품</a></li>
+                            <li><a href="#">일반의약품</a></li>
+                            <li><a href="#">의료 소모품</a></li>
+                            <li><a href="#">의료기기</a></li>
+                            <li><a href="#">건강기능식품</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-submenu">
+                        <a href="#" class="nav-link">신덕소식</a>
+                        <ul class="submenu">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">신덕소식</a></li>
+                            <li><a href="#">제품정보</a></li>
+                            <li><a href="#">업계소식</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">채용정보</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- 모바일 메뉴 토글 버튼 -->
+            <button class="mobile-menu-toggle" aria-label="메뉴 열기">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- 유틸리티 바 (WEB 주문, 연락처 등) -->
+        <div class="utility-bar">
+            <div class="utility-inner">
+                <ul class="utility-menu">
+                    <li><a href="#" class="utility-link">WEB 주문</a></li>
+                    <li><a href="#" class="utility-link">제약사</a></li>
+                    <li><a href="#" class="utility-link">오시는 길</a></li>
+                    <li><a href="#" class="utility-link">원격지원</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================
+         MAIN CONTENT
+         ======================================== -->
+    <main id="main-content">
+
+        <!-- Hero Slider Section -->
+        <section class="hero-section">
+            <div class="hero-slider">
+                <div class="hero-slide active">
+                    <div class="hero-content">
+                        <h2 class="hero-title">의약품 유통</h2>
+                        <p class="hero-subtitle">MEDICINE DISTRIBUTION</p>
+                        <p class="hero-description">
+                            의약품의 특성을 충분히 이해하고 입하, 재고 관리, 출하, 배송 업무를
+                            수행하고 있습니다.
+                        </p>
+                        <a href="#" class="hero-cta">No 1. TOTAL HEALTHCARE PARTNER SINDEOK</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="images/hero-1.jpg" alt="의약품 유통 서비스">
+                    </div>
+                </div>
+                <!-- 추가 슬라이드 -->
+                <div class="hero-slide">
+                    <div class="hero-content">
+                        <h2 class="hero-title">의료기기</h2>
+                        <p class="hero-subtitle">MEDICAL EQUIPMENT</p>
+                        <a href="#" class="hero-cta">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 슬라이더 컨트롤 -->
+            <div class="slider-controls">
+                <button class="slider-dot active" data-slide="0">1</button>
+                <button class="slider-dot" data-slide="1">2</button>
+                <button class="slider-dot" data-slide="2">3</button>
+                <button class="slider-dot" data-slide="3">4</button>
+            </div>
+
+            <!-- 슬라이더 네비게이션 -->
+            <div class="slider-arrows">
+                <button class="slider-prev" aria-label="이전 슬라이드">
+                    <img src="images/arrow-prev.svg" alt="이전">
+                </button>
+                <button class="slider-next" aria-label="다음 슬라이드">
+                    <img src="images/arrow-next.svg" alt="다음">
+                </button>
+            </div>
+        </section>
+
+        <!-- Notice + Product Section -->
+        <section class="notice-product-section">
+            <div class="section-container">
+                <!-- 공지사항 -->
+                <div class="notice-block">
+                    <div class="notice-tabs">
+                        <button class="tab-btn active" data-tab="notice">공지사항</button>
+                        <button class="tab-btn" data-tab="news">신덕소식</button>
+                        <button class="tab-btn" data-tab="product">제품정보</button>
+                        <button class="tab-btn" data-tab="industry">업계소식</button>
+                    </div>
+                    <ul class="notice-list" id="notice-list">
+                        <li class="notice-item">
+                            <a href="#" class="notice-title">★ 부산통합물류센터 오픈 및 이전에 따른 배송일정 안내 ..</a>
+                            <span class="notice-date">2026-10-26</span>
+                        </li>
+                        <li class="notice-item">
+                            <a href="#" class="notice-title">◈ 신덕팜 지점별 한글날 연휴 휴무 및 배송안내 ◈ ..</a>
+                            <span class="notice-date">2026-09-30</span>
+                        </li>
+                        <li class="notice-item">
+                            <a href="#" class="notice-title">◈ 신덕팜 지점별 개천절 연휴 휴무 및 배송안내 ◈ ..</a>
+                            <span class="notice-date">2026-09-29</span>
+                        </li>
+                        <li class="notice-item">
+                            <a href="#" class="notice-title">◈ 신덕팜 지점별 추석연휴 휴무 및 배송안내 ..</a>
+                            <span class="notice-date">2026-09-08</span>
+                        </li>
+                        <li class="notice-item">
+                            <a href="#" class="notice-title">◈ 신덕팜 지점별 광복절 휴무 및 배송안내 ◈ ..</a>
+                            <span class="notice-date">2026-08-12</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="notice-more">
+                        공지사항 더보기
+                        <img src="images/arrow-right.svg" alt="더보기">
+                    </a>
+                </div>
+
+                <!-- 제품소개 캐러셀 -->
+                <div class="product-block">
+                    <h2 class="section-title">제품소개</h2>
+                    <p class="section-subtitle">SINDEOK PRODUCT</p>
+                    <div class="product-carousel">
+                        <div class="product-grid">
+                            <!-- 제품 카드 1 -->
+                            <div class="product-card">
+                                <a href="#" class="product-link">
+                                    <img src="images/product-1.jpg" alt="치감플러스액">
+                                    <p class="product-name">치감플러스액 (양한방종합..)</p>
+                                </a>
+                            </div>
+                            <!-- 제품 카드 2 -->
+                            <div class="product-card">
+                                <a href="#" class="product-link">
+                                    <img src="images/product-2.jpg" alt="컴프레셔 네블라이져">
+                                    <p class="product-name">컴프레셔 네블라이져 NE-C..</p>
+                                </a>
+                            </div>
+                            <!-- 제품 카드 3 -->
+                            <div class="product-card">
+                                <a href="#" class="product-link">
+                                    <img src="images/product-3.jpg" alt="란셋">
+                                    <p class="product-name">란셋</p>
+                                </a>
+                            </div>
+                            <!-- 제품 카드 4 -->
+                            <div class="product-card">
+                                <a href="#" class="product-link">
+                                    <img src="images/product-4.jpg" alt="훼럼포유 연질캡슐">
+                                    <p class="product-name">훼럼포유 연질캡슐..</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 캐러셀 네비게이션 -->
+                        <div class="carousel-nav">
+                            <button class="carousel-prev">Prev</button>
+                            <div class="carousel-dots">
+                                <button class="dot active">1</button>
+                                <button class="dot">2</button>
+                                <button class="dot">3</button>
+                                <button class="dot">4</button>
+                            </div>
+                            <button class="carousel-next">Next</button>
+                        </div>
+                    </div>
+                    <a href="#" class="product-more">제품더보기</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Actions Section -->
+        <section class="quick-actions-section">
+            <div class="section-container">
+                <div class="action-grid">
+                    <!-- WEB 주문 -->
+                    <div class="action-card order">
+                        <p class="action-text">
+                            WEB 주문을 통해서<br>
+                            365 일 24 시간 간편하게<br>
+                            제품을 주문하실 수 있습니다.
+                        </p>
+                        <a href="#" class="action-btn">주문하기</a>
+                    </div>
+                    <!-- 문의하기 -->
+                    <div class="action-card inquiry">
+                        <p class="action-text">
+                            문의사항 및 제안사항이 있으시면<br>
+                            언제든 질문해주세요.<br>
+                            항상 최고의 서비스를 위해<br>
+                            최선을 다하겠습니다.
+                        </p>
+                        <a href="#" class="action-btn">제안하기</a>
+                    </div>
+                    <!-- 원격지원 -->
+                    <div class="action-card support">
+                        <a href="#" class="support-link">
+                            <p class="support-title">원격지원서비스</p>
+                            <p class="support-subtitle">바로가기</p>
+                        </a>
+                    </div>
+                    <!-- 오시는길 -->
+                    <div class="action-card location">
+                        <a href="#" class="location-link">
+                            <p class="location-title">오시는 길</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="section-container">
+                <div class="about-grid">
+                    <div class="about-intro">
+                        <p class="about-label">ABOUT SINDEOK</p>
+                        <h2 class="about-title">신덕팜 소개</h2>
+                        <p class="about-description">
+                            국민의 건강을 든든히 지키는<br>
+                            신덕팜입니다.
+                        </p>
+                        <a href="#" class="about-more">+</a>
+                    </div>
+                    <div class="about-philosophy">
+                        <p class="about-label">PHILOSOPHY</p>
+                        <h2 class="about-title">신덕팜 철학</h2>
+                        <p class="about-description">
+                            74 년 신덕의<br>
+                            새로운 도약!
+                        </p>
+                        <a href="#" class="about-more">+</a>
+                    </div>
+                </div>
+                <div class="about-tagline">
+                    <p>74 년의 노하우로 의약품 유통의<br>새로운 패러다임을 만들어 갑니다.</p>
+                    <p class="tagline-bold">No 1. TOTAL HEALTHCARE PARTNER</p>
+                    <p class="tagline-brand">SINDEOK PHARM</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="images/logo-footer.png" alt="SINDEOK PHARM 로고">
+            </div>
+            <div class="footer-info">
+                <p class="footer-address">
+                    신덕팜부산광역시 동구 자성로 140 번길 53 (주) 신덕팜
+                </p>
+                <p class="footer-contact">
+                    대표번호 : 051-667-6677
+                    팩스 : 051-645-2263
+                    고객센터 : 1833-8111
+                    Email : sindeok@pharm.biz
+                </p>
+            </div>
+            <p class="footer-copyright">
+                Copyright ⓒ SINDEOK PHARM, All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
