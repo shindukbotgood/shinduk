@@ -136,7 +136,7 @@ button {
 
 /* Logo */
 .logo img {
-    height: 50px;
+    height: 60px;
     width: auto;
 }
 
@@ -152,28 +152,32 @@ button {
 
 .nav-item {
     position: relative;
-    padding: 15px 0;
 }
 
 .nav-link {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     color: #333333;
-    padding: 15px 20px;
+    padding: 20px 18px;
     display: block;
     position: relative;
+    transition: color 0.3s ease;
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 20px;
-    right: 20px;
+    left: 0;
+    width: 100%;
     height: 3px;
-    background: #0066cc;
+    background: #27ae60;
     transform: scaleX(0);
     transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #27ae60;
 }
 
 .nav-link:hover::after {
@@ -185,10 +189,10 @@ button {
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 200px;
+    min-width: 220px;
     background: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-top: 3px solid #0066cc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    border-top: 3px solid #27ae60;
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
@@ -203,7 +207,7 @@ button {
 }
 
 .submenu li {
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f5f5f5;
 }
 
 .submenu li:last-child {
@@ -212,15 +216,16 @@ button {
 
 .submenu a {
     display: block;
-    padding: 12px 20px;
+    padding: 14px 20px;
     font-size: 14px;
-    color: #555555;
+    color: #444444;
+    font-weight: 500;
     transition: all 0.2s ease;
 }
 
 .submenu a:hover {
-    background: #f8f9fa;
-    color: #0066cc;
+    background: #f9fdf9;
+    color: #27ae60;
     padding-left: 25px;
 }
 
@@ -445,25 +450,32 @@ button {
 /* Slider Controls */
 .slider-controls {
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 12px;
+    gap: 10px;
     z-index: 4;
 }
 
 .slider-dot {
     width: 10px;
     height: 10px;
-    border-radius: 2px;
-    background: rgba(0, 102, 204, 0.3);
+    border-radius: 50%;
+    background: rgba(200, 200, 200, 0.5);
+    border: 2px solid #ffffff;
     transition: all 0.3s ease;
+    padding: 0;
 }
 
 .slider-dot.active {
-    background: #0066cc;
-    width: 30px;
+    background: #27ae60;
+    border-color: #27ae60;
+    transform: scale(1.2);
+}
+
+.slider-dot:hover {
+    background: rgba(39, 174, 96, 0.7);
 }
 
 .slider-arrows {
@@ -480,14 +492,15 @@ button {
 
 .slider-prev,
 .slider-next {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     background: #ffffff;
+    border: 1px solid #e0e0e0;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     position: relative;
     pointer-events: auto;
@@ -497,24 +510,25 @@ button {
 .slider-next::after {
     content: '';
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    border: 2px solid #333333;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #666666;
     border-top: none;
     border-right: none;
 }
 
 .slider-prev::after {
-    transform: rotate(45deg) translate(-2px, -2px);
+    transform: rotate(45deg) translate(-2px, -1px);
 }
 
 .slider-next::after {
-    transform: rotate(225deg) translate(-2px, -2px);
+    transform: rotate(225deg) translate(-2px, -1px);
 }
 
 .slider-prev:hover,
 .slider-next:hover {
-    background: #0066cc;
+    background: #27ae60;
+    border-color: #27ae60;
     transform: scale(1.05);
 }
 
@@ -1028,7 +1042,7 @@ button {
     }
 
     .nav-link {
-        padding: 15px 15px;
+        padding: 20px 15px;
         font-size: 14px;
     }
 
@@ -1040,11 +1054,13 @@ button {
         grid-template-columns: 1fr;
         gap: 30px;
         text-align: center;
+        padding: 0 30px;
     }
 
     .hero-info-card {
         max-width: 400px;
         margin: 0 auto;
+        padding: 30px 25px;
     }
 
     .hero-main-content {
@@ -1053,6 +1069,11 @@ button {
 
     .hero-title {
         font-size: 42px;
+        letter-spacing: -2px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
     }
 
     .product-grid {
