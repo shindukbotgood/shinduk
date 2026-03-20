@@ -74,12 +74,18 @@ button {
    HEADER STYLES
    ============================================ */
 .site-header {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid #e0e0e0;
-    position: sticky;
-    top: 0;
+    position: relative;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .header-inner {
@@ -90,6 +96,56 @@ button {
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+}
+
+/* Utility Bar - Fixed on scroll */
+.utility-bar {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.utility-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.utility-menu {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+}
+
+.utility-link {
+    font-size: 13px;
+    color: #666666;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+}
+
+.utility-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #0066cc;
+    transition: width 0.3s ease;
+}
+
+.utility-link:hover::after {
+    width: 100%;
+}
+
+.utility-link:hover {
+    color: #0066cc;
 }
 
 /* Logo */
