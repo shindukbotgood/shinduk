@@ -13,6 +13,41 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // ========================================
+    // HEADER SCROLL BEHAVIOR
+    // ========================================
+    const siteHeader = document.querySelector('.site-header');
+    let lastScrollY = window.scrollY;
+    
+    function handleHeaderScroll() {
+        const currentScrollY = window.scrollY;
+        
+        // Utility bar 는 항상 고정 (sticky)
+        // Main header 는 스크롤 시 함께 내려감
+        if (currentScrollY > 100) {
+            siteHeader?.classList.add('scrolled');
+        } else {
+            siteHeader?.classList.remove('scrolled');
+        }
+        
+        lastScrollY = currentScrollY;
+    }
+    
+    // Throttled scroll listener
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                handleHeaderScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+    
+    // Initial check
+    handleHeaderScroll();
+    
+    // ========================================
     // HERO SLIDER
     // ========================================
     const heroSlider = {
