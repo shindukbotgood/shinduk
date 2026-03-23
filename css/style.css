@@ -531,13 +531,14 @@ button {
 }
 
 /* ============================================
-   BOTTOM TEXT AREA (Original Site Match)
+   BOTTOM TEXT AREA (Original Site Match - Before Footer)
    ============================================ */
 .bt-area-main {
     position: relative;
     background: url('../images/ft_img_main.png') no-repeat bottom center #e9f1f5;
     height: 550px;
     padding-top: 100px;
+    margin-top: 0;
 }
 
 .bt-ar-inner {
@@ -551,6 +552,7 @@ button {
     text-align: center;
     font-size: 3.1em;
     color: #374f5b;
+    line-height: 1.4;
 }
 
 .bt-txt2 {
@@ -568,6 +570,7 @@ button {
     color: #34d9c3;
     letter-spacing: 0.1em;
     font-weight: 600;
+    margin-top: 10px;
 }
 
 /* ============================================
