@@ -390,6 +390,19 @@ button {
 
 .exslider li {
     width: 100%;
+    height: 1050px;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.exslider li:first-child {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
 }
 
 .exslider li .text-inner {
@@ -397,6 +410,7 @@ button {
     display: block;
     width: 1300px;
     margin: 0 auto;
+    padding-top: 200px;
 }
 
 /* Slide Text - Original Typography */
@@ -461,6 +475,7 @@ button {
 
 .ex-controls a {
     display: inline-block;
+    cursor: pointer;
 }
 
 .ex-controls a.ex-slider-prev {
@@ -470,6 +485,7 @@ button {
     width: 25px;
     height: 49px;
     background: url('../images/btn_prev.png') no-repeat;
+    transition: opacity 0.3s ease;
 }
 
 .ex-controls a.ex-slider-next {
@@ -479,6 +495,12 @@ button {
     width: 25px;
     height: 49px;
     background: url('../images/btn_next.png') no-repeat;
+    transition: opacity 0.3s ease;
+}
+
+.ex-controls a.ex-slider-prev:hover,
+.ex-controls a.ex-slider-next:hover {
+    opacity: 0.7;
 }
 
 /* Pager Dots - Original Style */
