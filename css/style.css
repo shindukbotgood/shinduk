@@ -220,14 +220,17 @@ button {
 .top-btn {
     display: block;
     color: #fff;
-    padding: 16px 20px 15px 40px;
-    width: 100px;
+    padding: 16px 10px 15px 10px;
+    width: 90px;
     height: 50px;
     background: #26c4af;
     letter-spacing: -0.03em;
-    font-size: 1.1em;
+    font-size: 0.9em;
     transition: all 0.3s ease;
     text-align: center;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .top-btn.bg1 {
