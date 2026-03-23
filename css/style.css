@@ -152,20 +152,14 @@ button {
 }
 
 /* ============================================
-   TOP BAR WRAPPER - Scrolls with page
+   TOP BAR - Scrolls with page (disappears on scroll)
    ============================================ */
-.top-bar-wrapper {
+#top-bar {
     position: relative;
     width: 100%;
     height: 50px;
     background: #ffffff;
     z-index: 1002;
-}
-
-#top-bar {
-    position: relative;
-    width: 100%;
-    height: 50px;
 }
 
 /* ============================================
@@ -179,7 +173,7 @@ button {
     background: #ffffff;
 }
 
-.jb-fixed {
+.jb-menu.jb-fixed {
     position: fixed;
     top: 0;
     left: 0;
