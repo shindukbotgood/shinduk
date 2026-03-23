@@ -16,18 +16,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     const jbMenu = document.querySelector('.jb-menu');
     
+    // Debug: Check if element exists
+    console.log('Header element:', jbMenu);
+    
     window.addEventListener('scroll', function() {
         const scrollY = window.scrollY || window.pageYOffset;
         
+        console.log('Scroll Y:', scrollY, 'Has jb-fixed:', jbMenu?.classList.contains('jb-fixed'));
+        
         if (scrollY > 100) {
-            // Header 에 배경 추가
-            if (jbMenu) {
+            // Header 고정
+            if (jbMenu && !jbMenu.classList.contains('jb-fixed')) {
                 jbMenu.classList.add('jb-fixed');
+                console.log('Added jb-fixed');
             }
         } else {
-            // Header 원래대로 (투명)
-            if (jbMenu) {
+            // Header 원래대로
+            if (jbMenu && jbMenu.classList.contains('jb-fixed')) {
                 jbMenu.classList.remove('jb-fixed');
+                console.log('Removed jb-fixed');
             }
         }
     });
