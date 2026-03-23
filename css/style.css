@@ -115,7 +115,7 @@ button {
 #header {
     position: relative;
     width: 100%;
-    height: 140px;
+    height: 80px;  /* 140px → 80px (로고 높이에 맞춤) */
     font-family: 'Montserrat', 'Nanum Gothic', 'NanumSquareRound', sans-serif;
     background: transparent;
     z-index: 1001;
@@ -123,13 +123,13 @@ button {
 }
 
 .jb-fixed #header {
-    height: 80px;
+    height: 60px;  /* 80px → 60px */
 }
 
 .head-inner {
     position: relative;
     width: 1300px;
-    height: 140px;
+    height: 80px;  /* 140px → 80px */
     margin: 0 auto;
     transition: height 0.3s ease;
 }
@@ -138,7 +138,7 @@ button {
 .logo {
     position: absolute;
     left: 0;
-    top: 82px;
+    top: 26px;  /* 82px → 26px (중앙 정렬) */
     text-indent: -5000px;
     transition: top 0.3s ease;
 }
@@ -151,25 +151,25 @@ button {
 }
 
 .jb-fixed .head-inner {
-    height: 80px;
+    height: 60px;
 }
 
 .jb-fixed .logo {
-    top: 26px;
+    top: 16px;  /* 26px → 16px */
 }
 
 /* Main Navigation - Center Position */
 #main-nav {
     position: absolute;
     left: 325px;
-    top: 69px;
+    top: 15px;  /* 69px → 15px */
     height: 50px;
     z-index: 1000;
     transition: top 0.3s ease;
 }
 
 .jb-fixed #main-nav {
-    top: 15px;
+    top: 8px;  /* 15px → 8px */
 }
 
 .nav-menu {
