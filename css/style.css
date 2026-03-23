@@ -77,13 +77,14 @@ button {
     width: 100%;
     height: 140px;
     font-family: 'Montserrat', 'Nanum Gothic', 'NanumSquareRound', sans-serif;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.95);  /* 초기부터 반투명 */
     z-index: 1001;
     transition: height 0.3s ease;
 }
 
 .jb-fixed #header {
     height: 80px;
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .head-inner {
