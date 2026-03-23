@@ -54,21 +54,21 @@ button {
 }
 
 /* ============================================
-   HEADER - Overlay on Slider (Fixed on Scroll)
+   HEADER - Overlay on Slider (Scrolls with Page)
    ============================================ */
 .jb-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     width: 100%;
     z-index: 1000;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.95);  /* 초기부터 반투명 */
     transition: all 0.3s ease;
 }
 
 .jb-menu.jb-fixed {
-    background: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -84,7 +84,6 @@ button {
 
 .jb-fixed #header {
     height: 80px;
-    background: transparent;
 }
 
 .head-inner {
