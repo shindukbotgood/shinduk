@@ -130,8 +130,8 @@ document.addEventListener('DOMContentLoaded', function() {
             { title: '신덕팜, 업계 최초 당일배송 서비스 시작 ..', date: '2026-09-05' }
         ],
         product: [
-            { title: '신제품 '치감플러스액' 출시 안내 ..', date: '2026-11-01' },
-            { title: '의료기기 '컴프레셔 네블라이져' 품절 임박 ..', date: '2026-10-15' },
+            { title: '신제품 치감플러스액 출시 안내 ..', date: '2026-11-01' },
+            { title: '의료기기 컴프레셔 네블라이져 품절 임박 ..', date: '2026-10-15' },
             { title: '건강기능식품 할인 이벤트 진행 중 ..', date: '2026-09-25' }
         ],
         industry: [
