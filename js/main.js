@@ -16,10 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     const jbMenu = document.querySelector('.jb-menu');
     const topBar = document.getElementById('top-bar');
-    const body = document.body;
     
     window.addEventListener('scroll', function() {
-        const scrollY = window.scrollY;
+        const scrollY = window.scrollY || window.pageYOffset;
         
         if (scrollY > 100) {
             // Header 고정
@@ -28,11 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             // Top Bar 숨김
             if (topBar) {
-                topBar.style.display = 'none';
-            }
-            // Body padding 조정
-            if (body) {
-                body.classList.add('header-fixed');
+                topBar.classList.add('hidden');
             }
         } else {
             // Header 원래대로
@@ -41,14 +36,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             // Top Bar 표시
             if (topBar) {
-                topBar.style.display = 'block';
-            }
-            // Body padding 원래대로
-            if (body) {
-                body.classList.remove('header-fixed');
+                topBar.classList.remove('hidden');
             }
         }
     });
+    
+    // 초기 상태 확인
+    if (jbMenu) {
+        console.log('Header element found:', jbMenu.tagName);
+    }
+    if (topBar) {
+        console.log('Top bar element found:', topBar.id);
+    }
     
     // ========================================
     // HERO SLIDER (exslider)
