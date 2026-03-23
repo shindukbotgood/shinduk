@@ -71,17 +71,95 @@ button {
 }
 
 /* ============================================
-   HEADER STYLES (jbMenu Structure - Original Site Match)
+   TOP BAR - Utility Buttons (Scrolls away)
    ============================================ */
-.jbMenu {
+#top-bar {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #ffffff;
+    z-index: 1002;
+}
+
+.top-bar-inner {
+    position: relative;
+    width: 1300px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+/* Top Menu (Utility Buttons) - Original Style */
+.top-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50px;
+}
+
+.top-menu ul {
+    overflow: hidden;
+}
+
+.top-menu ul li {
+    position: relative;
+    float: left;
+    margin-left: 1px;
+}
+
+.top-btn {
+    display: block;
+    color: #fff;
+    padding: 16px 20px 15px 40px;
+    width: 120px;
+    height: 50px;
+    background: #26c4af;
+    letter-spacing: -0.03em;
+    font-size: 1.15em;
+    transition: all 0.3s ease;
+}
+
+.top-btn.bg1 {
+    background: #0d8e7d;
+}
+
+.top-btn.bg2 {
+    background: #26c4af;
+}
+
+.top-btn.bg3 {
+    background: #248d9f;
+}
+
+.top-btn:hover {
+    background: #008ee8;
+}
+
+.top-btn.bg1:hover {
+    background: #008ee8;
+}
+
+.top-btn.bg2:hover {
+    background: #07619a;
+}
+
+.top-btn.bg3:hover {
+    background: #07619a;
+}
+
+/* ============================================
+   HEADER STYLES (jbMenu Structure - Fixed on Scroll)
+   ============================================ */
+.jb-menu {
     text-align: center;
     width: 100%;
     z-index: 1000;
 }
 
-.jbFixed {
+.jb-fixed {
     position: fixed;
     top: 0;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 #header {
@@ -91,6 +169,7 @@ button {
     font-family: 'Montserrat', 'Nanum Gothic', 'NanumSquareRound', sans-serif;
     background: #ffffff;
     z-index: 1001;
+    transition: height 0.3s ease;
 }
 
 .head-inner {
@@ -98,6 +177,7 @@ button {
     width: 1300px;
     height: 140px;
     margin: 0 auto;
+    transition: height 0.3s ease;
 }
 
 /* Logo - Original Position */
@@ -106,6 +186,7 @@ button {
     left: 0;
     top: 82px;
     text-indent: -5000px;
+    transition: top 0.3s ease;
 }
 
 .logo a {
@@ -115,16 +196,16 @@ button {
     display: block;
 }
 
-.jbFixed #header {
+.jb-fixed #header {
     height: 80px;
     border-bottom: 1px solid #ccd2d7;
 }
 
-.jbFixed .head-inner {
+.jb-fixed .head-inner {
     height: 80px;
 }
 
-.jbFixed .logo {
+.jb-fixed .logo {
     top: 25px;
 }
 
@@ -135,9 +216,10 @@ button {
     top: 69px;
     height: 50px;
     z-index: 1000;
+    transition: top 0.3s ease;
 }
 
-.jbFixed #main-nav {
+.jb-fixed #main-nav {
     top: 12px;
 }
 
@@ -359,13 +441,18 @@ button {
    HERO SLIDER (main_visual - Original Site Match)
    ============================================ */
 .main-visual {
-    position: fixed;
+    position: relative;
     left: 0;
     top: 0;
     width: 100%;
     height: 1050px;
     background: #fff;
     z-index: 0;
+    margin-top: 140px; /* Header height compensation */
+}
+
+.jb-fixed ~ .main-visual {
+    margin-top: 80px; /* Adjust for fixed header */
 }
 
 .ex-slider-wrap {
