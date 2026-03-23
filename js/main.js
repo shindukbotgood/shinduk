@@ -15,26 +15,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // HEADER SCROLL BEHAVIOR (jbMenu)
     // ========================================
     const jbMenu = document.querySelector('.jb-menu');
-    
-    // Debug: Check if element exists
-    console.log('Header element:', jbMenu);
+    const topBar = document.getElementById('top-bar');
     
     window.addEventListener('scroll', function() {
         const scrollY = window.scrollY || window.pageYOffset;
-        
-        console.log('Scroll Y:', scrollY, 'Has jb-fixed:', jbMenu?.classList.contains('jb-fixed'));
         
         if (scrollY > 100) {
             // Header 고정
             if (jbMenu && !jbMenu.classList.contains('jb-fixed')) {
                 jbMenu.classList.add('jb-fixed');
-                console.log('Added jb-fixed');
+            }
+            // Top Bar 숨김
+            if (topBar && !topBar.classList.contains('hidden')) {
+                topBar.classList.add('hidden');
             }
         } else {
             // Header 원래대로
             if (jbMenu && jbMenu.classList.contains('jb-fixed')) {
                 jbMenu.classList.remove('jb-fixed');
-                console.log('Removed jb-fixed');
+            }
+            // Top Bar 표시
+            if (topBar && topBar.classList.contains('hidden')) {
+                topBar.classList.remove('hidden');
             }
         }
     });
