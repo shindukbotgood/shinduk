@@ -15,39 +15,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // HEADER SCROLL BEHAVIOR (jbMenu)
     // ========================================
     const jbMenu = document.querySelector('.jb-menu');
-    const topBar = document.getElementById('top-bar');
     
     window.addEventListener('scroll', function() {
         const scrollY = window.scrollY || window.pageYOffset;
         
         if (scrollY > 100) {
-            // Header 고정
+            // Header 에 배경 추가
             if (jbMenu) {
                 jbMenu.classList.add('jb-fixed');
             }
-            // Top Bar 숨김
-            if (topBar) {
-                topBar.classList.add('hidden');
-            }
         } else {
-            // Header 원래대로
+            // Header 원래대로 (투명)
             if (jbMenu) {
                 jbMenu.classList.remove('jb-fixed');
             }
-            // Top Bar 표시
-            if (topBar) {
-                topBar.classList.remove('hidden');
-            }
         }
     });
-    
-    // 초기 상태 확인
-    if (jbMenu) {
-        console.log('Header element found:', jbMenu.tagName);
-    }
-    if (topBar) {
-        console.log('Top bar element found:', topBar.id);
-    }
     
     // ========================================
     // HERO SLIDER (exslider)
