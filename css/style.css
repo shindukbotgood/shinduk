@@ -138,7 +138,7 @@ button {
 .logo {
     position: absolute;
     left: 0;
-    top: 26px;  /* 82px → 26px (중앙 정렬) */
+    top: 15px;  /* 로고를 더 위로 (26px → 15px) */
     text-indent: -5000px;
     transition: top 0.3s ease;
 }
@@ -155,7 +155,7 @@ button {
 }
 
 .jb-fixed .logo {
-    top: 16px;  /* 26px → 16px */
+    top: 10px;  /* 16px → 10px */
 }
 
 /* Main Navigation - Center Position */
