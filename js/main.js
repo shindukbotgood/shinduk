@@ -16,23 +16,36 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     const jbMenu = document.querySelector('.jb-menu');
     const topBar = document.getElementById('top-bar');
+    const body = document.body;
     
     window.addEventListener('scroll', function() {
         const scrollY = window.scrollY;
         
         if (scrollY > 100) {
             // Header 고정
-            jbMenu?.classList.add('jb-fixed');
+            if (jbMenu) {
+                jbMenu.classList.add('jb-fixed');
+            }
             // Top Bar 숨김
             if (topBar) {
                 topBar.style.display = 'none';
             }
+            // Body padding 조정
+            if (body) {
+                body.classList.add('header-fixed');
+            }
         } else {
             // Header 원래대로
-            jbMenu?.classList.remove('jb-fixed');
+            if (jbMenu) {
+                jbMenu.classList.remove('jb-fixed');
+            }
             // Top Bar 표시
             if (topBar) {
                 topBar.style.display = 'block';
+            }
+            // Body padding 원래대로
+            if (body) {
+                body.classList.remove('header-fixed');
             }
         }
     });

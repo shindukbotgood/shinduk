@@ -22,6 +22,11 @@ body {
     background-color: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding-top: 190px; /* Top Bar (50px) + Header (140px) */
+}
+
+body.header-fixed {
+    padding-top: 80px; /* Fixed header only (Top Bar hidden) */
 }
 
 a {
@@ -153,13 +158,17 @@ button {
     text-align: center;
     width: 100%;
     z-index: 1000;
+    position: relative;
 }
 
 .jb-fixed {
-    position: fixed;
+    position: fixed !important;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000 !important;
 }
 
 #header {
@@ -448,11 +457,11 @@ button {
     height: 1050px;
     background: #fff;
     z-index: 0;
-    margin-top: 140px; /* Header height compensation */
+    margin-top: 190px; /* Top Bar (50px) + Header (140px) compensation */
 }
 
 .jb-fixed ~ .main-visual {
-    margin-top: 80px; /* Adjust for fixed header */
+    margin-top: 80px; /* Adjust for fixed header (Top Bar hidden) */
 }
 
 .ex-slider-wrap {
