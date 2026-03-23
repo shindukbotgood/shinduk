@@ -538,7 +538,7 @@ button {
     background: url('../images/ft_img_main.png') no-repeat bottom center #e9f1f5;
     height: 550px;
     padding-top: 100px;
-    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .bt-ar-inner {
