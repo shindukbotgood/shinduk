@@ -144,12 +144,8 @@ button {
 }
 
 .logo a {
-    display: block;
-    width: 198px;
-    height: 28px;
-}
-
-.logo img {
+    background: url('../images/logo.png') no-repeat center center;
+    background-size: contain;
     width: 198px;
     height: 28px;
     display: block;
