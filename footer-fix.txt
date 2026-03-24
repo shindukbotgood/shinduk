@@ -1,0 +1,8 @@
+            <address>
+                <span class="col1">(주) 신덕팜</span>
+                <span class="col2">경기도 용인시 기흥구 중부대로 874 번길 3 (상하동)</span><br>
+                대표번호 : 031-218-3200
+                <span class="col2">팩스 : 031-214-5729</span>
+                <span class="col2">고객센터 : 1588-2006</span>
+                <span class="col2">Email : sdpharm@hanmail.net</span>
+            </address>
